@@ -1,0 +1,76 @@
+.travel__heading {
+    margin: 10px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.travel {
+    margin-bottom: 20%;
+    padding: 0 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 1px;
+}
+
+.travel__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}
+
+.travel__day {
+    margin: 10px 0;
+    padding: 5px 0;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid #346218;
+    border-bottom: 1px solid #346218;
+}
+
+.travel__wrap {
+    min-height: 50px;
+}
+
+.travel__img {
+    float: left;
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.travel__description {
+    margin: 5px 0;
+}
+
+.travel__addition {
+    margin: 5px 0;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+@media screen and (min-width: 600px) {
+    .travel {
+        width: 560px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    .travel__wrap {
+        min-height: 100px;
+    }
+
+    .travel__day,
+    .travel__subtitle {
+        font-size: 16px;
+    }
+
+    .travel__img {
+        width: 100px;
+        height: auto;
+    }
+}

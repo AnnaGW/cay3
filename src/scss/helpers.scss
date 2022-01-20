@@ -1,0 +1,106 @@
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;//пришлось добавить на хостинге, чтобы перекрыть слайдер, иначе меню не убирается
+    width: 100%;
+    height: 100vh;
+
+    &--02 {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.button {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    font: inherit;
+    text-align: center;
+    color: $color-darkgreen;
+    text-transform: uppercase;
+    border: 1px solid $color-darkgreen;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        //color: #ffffff;
+        //background-color: #444444;
+        outline: none;
+    }
+
+    &:active {
+        //color: rgba(256, 256, 256, 0.3);
+        //background-color: #444444;
+    }
+}
+
+.reveal { //возможно он есть где-то в верстке, оставлю пока
+    display: block;
+}
+
+.to-show {
+    display: block;
+}
+
+.to-delete {
+    display: none;
+}
+
+.only-in-window {
+    width: 100%;
+    overflow: hidden;
+}
+
+.shadow {
+    box-shadow: -4px 4px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.border-bottom {
+    border-bottom: 1px solid #346218;
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .container {
+        width: 1000px;
+        min-height: calc(100vh - 146px - 90px - 15px);
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+        padding-top: 30px;
+    }
+}
+
+/*.deleter {
+display: none;
+}*/
