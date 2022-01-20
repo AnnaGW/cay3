@@ -1,0 +1,116 @@
+/*nav-site*/
+
+.nav-site {
+    z-index: 9; /*нужен из-за слайдера на гл стр*/
+    font-style: normal;
+    color: $white;
+}
+
+.nav-site__item {
+    display: block;
+    width: 190px;
+    padding: 20px;
+    padding-right: 50px;
+    background-color: #55952e;
+    border-bottom: 1px solid #518830;
+
+    &--is-submenu {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 24px;
+            right: 25px;
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #eeeeee;
+            border-bottom: 2px solid #eeeeee;
+            transform: rotate(45deg);
+        }
+    }
+
+    &--submenu-open {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 24px;
+            right: 25px;
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #eeeeee;
+            border-bottom: 2px solid #eeeeee;
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+.nav-site__submenu {
+    z-index: 10;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+    transition-property: height;
+}
+
+.nav-site__submenu-item {
+    display: block;
+    width: 210px;
+    padding: 15px;
+    padding-left: 35px;
+    background-color: #85c45e;
+    border-bottom: 1px solid #7aa45f;
+}
+
+@media screen and (min-width: 600px) {
+    .nav-site__menu {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .nav-site__item {
+        width: 80px;
+        padding: 5px;
+        text-align: right;
+        background-color: $color-green;
+        border: none;
+        border-radius: 0;
+
+        &--is-submenu {
+            width: 100px;
+            padding-right: 30px;
+
+            &::after {
+                content: "";
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        &--yoga {
+            width: 60px;
+        }
+
+        &--contacts {
+            width: 100px;
+        }
+
+        &--shop {
+            width: 200px;
+        }
+    }
+
+    .nav-site__submenu {
+        position: absolute;
+    }
+}
+
+/*@media screen and (min-width: 600px) {
+.nav-site {
+font-size: 18px;
+}
+}
+*/
